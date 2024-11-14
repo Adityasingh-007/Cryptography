@@ -1,0 +1,98 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+		
+	    String cipher="hello";
+	    
+	    int mod=26;
+	    
+	    switch(mod){
+	        case 26:
+	            ciphertext1(cipher,mod);
+	            break;
+	        case 256:
+	            ciphertext2(cipher,mod);
+	    }
+	   // ciphertext(cipher,mod);
+	}
+	public static void ciphertext1(String cipher,int mod){
+	    
+	  
+		int k=15;
+		int k_inverse=11;
+		
+		String encryptCipher="";
+		
+		
+		
+		for(int i=0;i<cipher.length();i++){
+		    
+		    char ch=cipher.charAt(i);
+		    char ans;
+	       
+	       
+	       if(cipher.charAt(i)>=97&&cipher.charAt(i)<=122){
+	           
+		    int encrypt=((int)ch-97+k)%(mod);
+		     System.out.println(encrypt);
+		     
+		        ans=(char)(encrypt+97);
+		    
+	       }
+	       else{
+	         int encrypt=((int)ch-65+k)%(mod);
+		     System.out.println(encrypt);
+		     
+		        ans=(char)(encrypt+65);  
+	       }
+		    
+		    encryptCipher+=ans;
+		}
+		
+		System.out.println(encryptCipher);
+	}
+		public static void ciphertext2(String cipher,int mod){
+	    
+	  
+		int k=15;
+		int k_inverse=11;
+		
+		String encryptCipher="";
+		
+		
+		
+		for(int i=0;i<cipher.length();i++){
+		    
+		    char ch=cipher.charAt(i);
+		    char ans;
+	       
+	       
+	       if(cipher.charAt(i)>=97&&cipher.charAt(i)<=122){
+	           
+		    int encrypt=((int)ch-97+k)%(mod);
+		     System.out.println(encrypt);
+		     
+		        ans=(char)(encrypt+97);
+		    
+	       }
+	       else{
+	         int encrypt=((int)ch-65+k)%(mod);
+		     System.out.println(encrypt);
+		     
+		        ans=(char)(encrypt+65);  
+	       }
+		    
+		    encryptCipher+=ans;
+		}
+		
+		System.out.println(encryptCipher);
+	}
+}
